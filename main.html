@@ -1,30 +1,27 @@
 <html>
     <body>
-       
-       
+     
+        <input type="text" id="evaluatedText" oninput="fun()" >
+        </input>
       
-        <textarea id="evaluatedText" oninput="countWord()" >
-        </textarea>
-        <br><br>
         <h3 id="wordCount"></h3>
      
       
         <script>
-            function countWord() {
+            function fun() {
               
-                // Get the input text value
-                var words = document
+                var str = document
                     .getElementById("evaluatedText").value;
               
                 // Initialize the word counter
                 var count = 0;
               
              
-                var split = words.split(' ');
+                var splited = str.split(' ');
               
                
-                for (var i = 0; i < split.length; i++) {
-                    if (split[i] != "") {
+                for (var i = 0; i < splited.length; i++) {
+                    if (splited[i] != "") {
                         count += 1;
                     }
                 }
